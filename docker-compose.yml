@@ -1,0 +1,42 @@
+version: '3.7'
+networks:
+  has_docker:
+    driver: bridge
+volumes:
+  app_assets:
+services:
+  db:
+    image: postgres:14.1
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 5432:5432
+    networks:
+      - has_docker
+  app:
+    image: my-teste-ruby
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@db:5432/has_analysis_doctor_app_test
+      # RAILS_SERVE_STATIC_FILES: 'true'
+    build: 
+      dockerfile: Dockerfile
+      context: .
+    volumes:
+      - app_assets:/app/public
+    ports:
+      - 5000:5000
+    networks:
+      - has_docker
+    depends_on:
+      - db
+  # web:
+  #   image: nginx:1.17-alpine
+  #   volumes:
+  #     - app_assets:/app/public
+  #     - $PWD/nginx:/etc/nginx/conf.d
+  #   networks:
+  #     - has_docker
+  #   ports:
+  #     - 80:80
+  #   depends_on:
+  #     - app
