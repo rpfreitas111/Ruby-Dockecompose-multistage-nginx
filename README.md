@@ -24,7 +24,7 @@ Este é um projeto pessoal com objetivo de entender e criar as etapas necessári
  **`docker-compose up -d --build && docker-compose run app rake  db:setup`**
  - docker-compose up -d --build => faz o trabalho de build da aplicação carreta toda a arquitetura necessária.
  - docker-compose run app rake db:setup => executa o comando dentro do serviço **app**  para criar o banco, carregar os schema e seed.
- - 
+  
 ## Imagem DockerFile
 
   Ao trabalhar com um projeto de uma aplicação em ruby utilizando uma imagem padrão do ruby e sem realizar nenhum processo de limpeza a imagem final da aplicação ficou com **1.54Gb** segue imagem:
