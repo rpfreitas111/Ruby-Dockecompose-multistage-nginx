@@ -23,7 +23,7 @@ Este é um projeto pessoal com objetivo de entender e criar as etapas necessári
 
  **`docker-compose up -d --build && docker-compose run app rake  db:setup`**
  - docker-compose up -d --build => faz o trabalho de build da aplicação carreta toda a arquitetura necessária.
- - docker-compose run app rake db:setup => executa o comando dentro do serviço **app**  para criar o banco, carregar os schema e seed.
+ - docker-compose run app rake db:setup => executar o comando no serviço **app**  para criar o banco, carregar os schema e seed.
   
 ## Imagem DockerFile
 
