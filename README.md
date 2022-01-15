@@ -1,5 +1,5 @@
 # Infra Ruby com Dockerfile multi-stage + nginx para assets + Postgresql 
-Este é um projeto pessoal com objetivo de entender e criar as etapas necessárias para uma infra estrutura toda automatizada com docker-compose para linguagem Ruby. 
+Este é um projeto pessoal com objetivo de entender e criar as etapas necessárias para uma infraestrutura toda automatizada com docker-compose para linguagem Ruby. 
 
 #### Versão da imagem
 
